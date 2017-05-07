@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="restaurantBean" class="org.ankitgupta.springcore.Restaurant">
+        <property name="greetMessage" value="${welcomeNote}"></property>
+        <!--<constructor-arg ref="bmwBean"></constructor-arg>-->
+        <!--<property name="car" ref="bmwBean"></property>-->
+        <!--<property name="restaurantWaiterList">-->
+            <!--<list>-->
+                <!--<value>Ankit</value>-->
+                <!--<value>Gagan</value>-->
+                <!--<value>Jagmohan</value>-->
+                <!--<value>Rimmy</value>-->
+                <!--<value>Manjeet</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    </bean>
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <value>classpath:spring.properties</value>
+        </property>
+    </bean>
+<!--<bean class="org.ankitgupta.springcore.DemoBeanFactoryPostProcessor"></bean>-->
+    <!--<bean class="org.ankitgupta.springcore.DemoBeanPostProcessor"></bean>-->
+<!---->
+    <!--<bean class="org.ankitgupta.springcore.DemoBeanPostProcessor1"></bean>-->
+
+    <!--<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean>-->
+    <!--<bean id="bmwBean" class="org.ankitgupta.springcore.BMW"></bean>-->
+
+    <!--<bean id="coffeeBean" class="org.ankitgupta.springcore.Coffee"></bean>-->
+</beans>
